@@ -89,7 +89,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              geohistorical dtaa project.
+              geohistorical data project.
             </div>
           </div>
 
@@ -135,7 +135,7 @@
 		/* http://locationiq.org/#docs 
 		http://locationiq.org/v1/search.php?key=c32836f0d85454b3e5b4&format=json&q=26%20rue%2Vieille%20du%20temple,%20Paris  */
 		
-		var uri = encodeURI('https://www.geohistoricaldata.org/geocoding/geocoding.php?adresse='+cleaned_user_adresse+'&date='+cleaned_user_date+'&number_of_results='+cleaned_user_n_results+'&use_precise_localisation='+cleaned_user_use_precise_localisation);
+		var uri = encodeURI('geocoding.php?adresse='+cleaned_user_adresse+'&date='+cleaned_user_date+'&number_of_results='+cleaned_user_n_results+'&use_precise_localisation='+cleaned_user_use_precise_localisation);
 		//var uri = encodeURI('http://locationiq.org/v1/search.php?key=c32836f0d85454b3e5b4'+'&format=json'+'&q='+cleaned_user_adresse+',FRANCE');
 		//alert('uri : ' + uri) ; 
 		
