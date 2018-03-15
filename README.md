@@ -10,4 +10,7 @@ In order to be able to run the front-end, you need to set the following environm
 - GEOCODER_PG_USER
 - GEOCODER_PG_PASSWORD
 
-These variables allow the frontend to connect with the postgresql database containing the geohistoricaldata
+These variables allow the frontend to connect with the postgresql database containing the geohistoricaldata.
+For instance, run the following command before running the frontend:
+export GEOCODER_PG_HOST=176.31.187.44
+
