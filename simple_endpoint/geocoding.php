@@ -12,11 +12,11 @@ $config['addContentLengthHeader'] = false;
 function connect_to_db()
 {
     // echo "connecting to database.\n";
-    $pg_string = "host=".getenv("GEOCODER_PG_HOST"); //localhost
-    $pg_string = $pg_string." port=5433"; //5433
-    $pg_string = $pg_string." dbname=test"; //test
-    $pg_string = $pg_string." user=geocoding_user";
-    $pg_string = $pg_string." password=geocoding_user";
+    $pg_string = "host=".getenv("GEOCODER_PG_HOST") ?: "localhost";
+    $pg_string = $pg_string." port=".getenv("GEOCODER_PG_PORT") ?: "5432";
+    $pg_string = $pg_string." dbname=".getenv("GEOCODER_PG_DBNAME") ?: "postgres";
+    $pg_string = $pg_string." user=".getenv("GEOCODER_PG_USER") ?: "postgres";
+    $pg_string = $pg_string." password=".getenv("GEOCODER_PG_PASSWORD") ?: "postgres";
     $pg_string = $pg_string." connect_timeout=5 options='--application_name=geoding_rest_api'";
     
     //print("pg_string : ".print_r($pg_string,true)) ; 
